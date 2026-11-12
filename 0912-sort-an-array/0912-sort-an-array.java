@@ -1,5 +1,5 @@
 public class Solution {
-    private int partition(int[] nums, int left, int right) {
+    private int sortelement(int[] nums, int left, int right) {
         int mid = (left + right) >> 1;
         swap(nums, mid, left + 1);
 
@@ -39,7 +39,7 @@ public class Solution {
             return;
         }
 
-        int j = partition(nums, left, right);
+        int j = sortelement(nums, left, right);
         quickSort(nums, left, j - 1);
         quickSort(nums, j + 1, right);
     }
