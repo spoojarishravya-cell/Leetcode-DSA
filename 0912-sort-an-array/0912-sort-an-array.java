@@ -10,19 +10,19 @@ public class Solution {
         if (nums[left] > nums[left + 1])
             swap(nums, left, left + 1);
 
-        int pivot = nums[left + 1];
+        int sample = nums[left + 1];
         int i = left + 1;
         int j = right;
 
         while (true) {
-            while (nums[++i] < pivot);
-            while (nums[--j] > pivot);
+            while (nums[++i] < sample);
+            while (nums[--j] > sample);
             if (i > j) break;
             swap(nums, i, j);
         }
 
         nums[left + 1] = nums[j];
-        nums[j] = pivot;
+        nums[j] = sample;
         return j;
     }
 
