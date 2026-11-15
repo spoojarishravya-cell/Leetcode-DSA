@@ -1,6 +1,6 @@
 public class Solution {
     private int sortelement(int[] nums, int left, int right) {
-        int mid = (left + right) >> 1;
+        int mid = (left + right) / 2;
         swap(nums, mid, left + 1);
 
         if (nums[left] > nums[right])
